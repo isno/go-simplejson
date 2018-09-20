@@ -15,6 +15,10 @@ type Json struct {
 	data interface{}
 }
 
+func NewFromAny(data interface{}) *Json {
+	return &Json{data: data}
+}
+
 // NewJson returns a pointer to a new `Json` object
 // after unmarshaling `body` bytes
 func NewJson(body []byte) (*Json, error) {
